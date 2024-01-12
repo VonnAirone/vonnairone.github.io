@@ -11,23 +11,15 @@
 	<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 	
 	    <a-assets>
-			<a-asset-item id="spider" src="./assets/spider.glb"></a-asset-item>
-			<a-asset-item id="cesiumman" src="./assets/CesiumMan.gltf"></a-asset-item>
+			<a-asset-item id="Mushroom" src="./Mushrooms.glb"></a-asset-item>
 		</a-assets>
          
 		<a-marker type='barcode' value='1'>
 					<a-entity
-						gltf-model="#spider"
+						gltf-model="#Mushroom"
 						scale="4 4 4" animation-mixer>
 					</a-entity>
-				</a-marker>         
-				
-		 <a-marker type='barcode' value='0'>
-					<a-entity
-						gltf-model="#cesiumman"
-						scale="2 2 2" animation-mixer>
-					</a-entity>
-				</a-marker>         
+				</a-marker>    
 
          <a-entity camera></a-entity>
     </a-scene>
