@@ -11,7 +11,7 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframeextras.min.js"></script>
 
-    <a-scene embedded arjs='sourceType: webcam; matrixCodeType: 3x3;'>
+    <a-scene embedded arjs='matrixCodeType: 3x3;'>
 
         <a-assets>
             <a-asset-item id="MrCubie" src="./Mushrooms.glb" asset-item>
@@ -20,6 +20,8 @@
         <a-marker type='barcode' value='1'>
             <a-entity gltf-model="#MrCubie" position="0 0 0" scale="0.5 0.5 0.5" animation-mixer></a-entity>
         </a-marker>
+
+        <a-entity camera></a-entity>
 
     </a-scene>
     
