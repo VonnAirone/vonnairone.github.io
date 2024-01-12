@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <a-entity
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        ></a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emsfe</title>
+</head>
+<body>
+    <script
+    src="https://cdn.jsdelivr.net/gh/aframevr/aframe@9b8609bd84a292ef97bf1e8589401ae0d3201280/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframeextras.min.js"></script>
+
+    <a-scene embedded arjs='sourceType: webcam; matrixCodeType: 3x3;'>
+
+        <a-assets>
+            <a-asset-item id="MrCubie" src="./Mushrooms.glb" asset-item>
+        </a-assets>
+
+        <a-marker type='barcode' value='1'>
+            <a-entity gltf-model="#MrCubie" position="0 0 0" scale="0.5 0.5 0.5" animation-mixer></a-entity>
+        </a-marker>
+
     </a-scene>
-  </body>
+    
+</body>
 </html>
