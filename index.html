@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@9b8609bd84a292ef97bf1e8589401ae0d3201280/dist/aframe-master.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+
 </head>
+
 <body style='margin: 0px; overflow: hidden; font-family: Monospace;'>
   <div id="popup" style='position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; background-color: white; padding: 20px; border: 1px solid black;'>
     <p>Click to pause the video</p>
@@ -12,34 +18,18 @@
 
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
+	<a-assets>
+		<a-asset-item id="mushroom" src="./Mushrooms.glb"></a-asset-item>
+	</a-assets>
+
     <a-marker type='barcode' value='1'>
-      <a-video 
-        id="video"
-        rotation="0 -90 -90"
-        src="./video.mp4"></a-video>
+      <a-entity 
+		gltf-model="#mushroom"
+		scale="1 1 1"
+        rotation="0 -90 -90"></a-entity>
     </a-marker>
 
     <a-entity camera></a-entity>
   </a-scene>
-
-  <script>
-    var video = document.getElementById('video');
-    
-    var popup = document.getElementById('popup');
-    video.addEventListener('click', function () {
-      if (!video.paused) {
-        video.pause();
-        popup.style.display = 'block';
-      } else {
-        video.play();
-        popup.style.display = 'none';
-      }
-    });
-
-    popup.addEventListener('click', function () {
-      video.play();
-      popup.style.display = 'none';
-    });
-  </script>
 </body>
 </html>
