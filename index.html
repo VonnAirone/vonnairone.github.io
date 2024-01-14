@@ -10,15 +10,9 @@
 
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-    <a-assets>
-			<audio id="svt" src="./audio.mp3" autoplay="true" loop="true" preload="auto"></audio>
-		</a-assets>
-
     <a-marker type='barcode' value='1'>
       <a-video
-        sound="src: #svt"
         scale="2 2 2"
-        rotation="-90 180 0"
         src="./video.mp4"></a-video>
     </a-marker>
 
