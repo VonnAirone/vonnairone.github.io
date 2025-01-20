@@ -18,7 +18,7 @@ const Contact = () => {
         </ul>
       </div>
 
-      <div className='mt-10'>
+      <div className='mt-10' id='services'>
         <p className='font-bold'>What services do I offer?</p>
       </div>
 
@@ -32,7 +32,7 @@ const Contact = () => {
         </ul>
       </div>
 
-      <div className='mt-10'>
+      <div className='mt-10' id='contact'>
         <p className='font-bold'>Get in touch with me</p>
         
           <ul className='flex gap-2 mt-2'>

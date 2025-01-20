@@ -14,7 +14,7 @@ const Main = () => {
         <p>A freelance UI Designer and front-end developer with a love for minimalism. I also do mobile app development.
         </p>
         <p>I design and build solutions for people and their business.   
-          <a href="#" className='underline'>How can I help you?</a></p>
+          <a href="#contact" className='underline'>How can I help you?</a></p>
       </div>
     
     </div>
