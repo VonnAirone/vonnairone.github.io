@@ -12,11 +12,11 @@ function App() {
         <Navbar/>
       </div>
 
-      <div style={{height: '100vh'}} className='flex flex-col justify-center'>
+      <div className='flex flex-col justify-center'>
         <Works/>
       </div>
 
-      <div style={{height: '100vh'}} className='flex flex-col justify-center'>
+      <div className='flex flex-col justify-center my-48'>
         <Contact/>
       </div>
       
